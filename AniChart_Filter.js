@@ -37,17 +37,7 @@ javascript:(function(){
 	console.error(divslength+1);
 	console.error("query chartwrap");
 	var deltrig;
-	for (var i = 0, len = divs.length; i < len; ++i) {
-		deltrig = 1;
-		console.error(String(divs.item(i).id) );
-		for (var iawl = 0, lenawl = animewatchlist.length; iawl < lenawl; ++iawl) {
-			console.error(String(divs.item(i).id).localeCompare(animewatchlist[iawl]));
-			if(String(divs.item(i).id).localeCompare(animewatchlist[iawl]) == 0) {
-				deltrig = 0;
-			};
-		};
-		if (deltrig != 0) {
-			elmDeleted = document.getElementById(divs.item(i).id);
+	
 			elmDeleted.parentNode.removeChild(elmDeleted);
 		};
 		
