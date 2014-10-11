@@ -51,7 +51,5 @@ javascript:(function(){
 			elmDeleted = document.getElementById(divs.item(i).id);
 			elmDeleted.parentNode.removeChild(elmDeleted);
 		};
-		
 	};
-
 })();
