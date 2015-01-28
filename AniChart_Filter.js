@@ -3,7 +3,6 @@ javascript:(function(){
 	"i20785",
 	"i20853",
 	"i20755",
-	"i20877",
 	"i20931",
 	"i20652",
 	"i20746",
@@ -15,6 +14,7 @@ javascript:(function(){
 	"i20657",
 	"i20627",
 	"i20678",
+	"i20850",
 	"i20922",
 	"i20827",
 	"i20770",
@@ -27,9 +27,7 @@ javascript:(function(){
 	"i20665",
 	"i20812",
 	"i20729",
-	"i20873",
-	"i20793",
-	"i20961"];
+	"i20793"];
 	var divs = document.querySelectorAll("div.card");
 	console.error(divs.length);
 	var divslength = divs.length;
