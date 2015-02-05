@@ -36,14 +36,14 @@ duration = raw_input('Duration S: ')
 #position = '00:12:05'
 #duration = '5'
 print uid[0]
-test = uid[0] + '%'
+test = uid[0] + '_'
 print test
 a = "ffmpeg -ss "
 b = " -i \""
 c = "\" -t " 
 d = " -r 24 e:\\autoscreenshots\\" 
-e = "04d"
-f = randomword(5)
+f = "04d"
+e = randomword(5) + '_%'
 g = ".png"
 ffmpegcommand = a + position + b + animelink[0] + c + duration + d + test + e + f + g
 print ffmpegcommand
