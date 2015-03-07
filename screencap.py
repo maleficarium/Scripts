@@ -9,7 +9,6 @@ def randomword(length):
    return ''.join(random.choice(string.lowercase) for i in range(length))
 
 os.system('cls') #CLEARS SCREEN, REMOVE WHEN TESTING
-#animeid = '*amagi*9*[*'
 
 path = 'M:\!!!Torrents'
 animeid = None
@@ -24,7 +23,7 @@ while animeid == None:
 	sid = sid+'*[*'
 	animelink = glob.glob(os.path.join(path, sid))
 	print animelink
-	check = raw_input('Return: Confirm, r:Retry: ')
+	check = raw_input('Return: Confirm, r: Retry: ')
 	if check == '' and len(animelink) == 1:
 		animeid = sid
 	else:
@@ -33,22 +32,9 @@ while animeid == None:
 position = raw_input('Time MM:SS: ')
 duration = raw_input('Duration S: ')
 
-#position = '00:12:05'
-#duration = '5'
-print uid[0]
-test = uid[0] + '_'
-print test
-a = "ffmpeg -ss "
-b = " -i \""
-c = "\" -t " 
-d = " -r 24 e:\\autoscreenshots\\" 
-f = "04d"
-e = randomword(5) + '_%'
-g = ".png"
-ffmpegcommand = a + position + b + animelink[0] + c + duration + d + test + e + f + g
+animeid = uid[0] + '_'
+
+ffmpegcommand = "ffmpeg -ss " + position + " -i \"" + animelink[0] + "\" -t "  + duration + " -r 24 e:\\autoscreenshots\\" + animeid + randomword(5) + "_%04d.png"
 print ffmpegcommand
-print ''
-ffmpegcommand2 = "ffmpeg -ss " + position + " -i \"" + animelink[0] + "\" -t " + duration + " -r 24 \"e:\\autoscreenshots\\" + test + "03d.png\""
-print ffmpegcommand2
-#sys.exit("Process loop starts here.")
+
 os.system(ffmpegcommand)

@@ -8,18 +8,13 @@ import time
 def randomword(length):
    return ''.join(random.choice(string.lowercase) for i in range(length))
 
-#os.system('cls') #CLEARS SCREEN, REMOVE WHEN TESTING
+userhome = os.path.expanduser('~')
+path = userhome + '/Desktop/'
 
-path = u'C:\\Users\\maleficarium\\Desktop\\'
 m4aList = glob.glob(os.path.join(path, u'*.m4a'))
 mp4List = glob.glob(os.path.join(path, u'*.mp4'))
 
-#print "-------------------------------------------------------------------\n"
-#print m4aList
-#print(u"Unicode List", m4aList[0])
-#print m4aList[0].encode('utf-8')[:-9]
-#print "-------------------------------------------------------------------\n"
-#sys.exit("Process loop starts here.")
+vids = 0
 
 for l in range (0, len(m4aList)):
 	for n in range (0, len(mp4List)):
@@ -41,4 +36,5 @@ for l in range (0, len(m4aList)):
 			time.sleep(0.5)
 			os.remove(audio_name)
 			os.remove(vid_name)
-print "FFmpeg merge end."
+			vids = vids + 1
+print "FFmpeg merge end. Converted videos: " + str(vids)
