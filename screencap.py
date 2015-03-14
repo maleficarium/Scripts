@@ -43,8 +43,8 @@ while animeid == None:
 		print "\nPlease be more specific."
 
 #Target clip from the episode to be converted
-position = raw_input('Input the time MM:SS: ')
-duration = raw_input('Input the duration S: ')
+position = raw_input('Input time MM:SS: ')
+duration = raw_input('Input duration S: ')
 
 #Structure the FFMPEG command
 ffmpegcommand = "ffmpeg -ss " + position + " -i \"" + animelink[0] + "\" -t "  + duration + " -r 24 " + outputpath + animecode[0] + "_" + randomword(5) + "_%04d.png"
