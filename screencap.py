@@ -10,29 +10,44 @@ def randomword(length):
 
 os.system('cls') #CLEARS SCREEN, REMOVE WHEN TESTING
 
-path = 'M:\!!!Torrents'
+#Set the path where the episodes are stored
+path = 'M:\\!!!Torrents'
+
+#Set the output path
+outputpath = 'e:\\autoscreenshots\\'
+
 animeid = None
 animelink = ''
+
 while animeid == None:
 	animecode = ''
 	animecode = raw_input('Enter Episode: ')
 	animecode = animecode.split()
 	regID = ''
+
+	#Transform the input into a regular expression
 	for x in animecode:
 		regID = regID+'*'+x
 	regID = regID+'*[*'
+
+	#Find all matching episodes
 	animelink = glob.glob(os.path.join(path, regID))
-	print animelink
-	check = raw_input('Return: Confirm, r: Retry: ')
-	if check == '' and len(animelink) == 1:
-		animeid = regID
-	elif check != 'r':
-		print "Please be more specific."
+	for xy in animelink:
+		print xy
 
-position = raw_input('Time MM:SS: ')
-duration = raw_input('Duration S: ')
+	if len(animelink) == 1:
+		check = raw_input('Enter to confirm, R to retry: ')
+		if check == '':
+			animeid = regID
+	else:
+		print "\nPlease be more specific."
 
-ffmpegcommand = "ffmpeg -ss " + position + " -i \"" + animelink[0] + "\" -t "  + duration + " -r 24 e:\\autoscreenshots\\" + animecode[0] + "_" + randomword(5) + "_%04d.png"
+#Target clip from the episode to be converted
+position = raw_input('Input the time MM:SS: ')
+duration = raw_input('Input the duration S: ')
+
+#Structure the FFMPEG command
+ffmpegcommand = "ffmpeg -ss " + position + " -i \"" + animelink[0] + "\" -t "  + duration + " -r 24 " + outputpath + animecode[0] + "_" + randomword(5) + "_%04d.png"
 print ffmpegcommand
 
 os.system(ffmpegcommand)

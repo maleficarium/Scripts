@@ -61,18 +61,17 @@ javascript:(function(){
 	"21040",
 	"20876"];
 	var divs = document.querySelectorAll("div.card");
-	var divslength = divs.length;
 	var deltrig;
 	for (var i = 0, len = divs.length; i < len; ++i) {
 		deltrig = 1;
-		for (var iawl = 0, lenawl = animewatchlist.length; iawl < lenawl; ++iawl) {
-			if(String(divs.item(i).id).localeCompare("i"+animewatchlist[iawl]) == 0) {
+		for (var il = 0, ilen = animewatchlist.length; il < ilen; ++il) {
+			if(String(divs.item(i).id).localeCompare("i"+animewatchlist[il]) == 0) {
 				deltrig = 0;
 			};
 		};
 		if (deltrig != 0) {
-			elmDeleted = document.getElementById(divs.item(i).id);
-			elmDeleted.parentNode.removeChild(elmDeleted);
+			elemDeleted = document.getElementById(divs.item(i).id);
+			elemDeleted.parentNode.removeChild(elemDeleted);
 		};
 	};
 })();
