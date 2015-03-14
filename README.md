@@ -23,4 +23,4 @@ A Python 2.7 script that scans the desktop folder for video & audio files produc
 
 <strong>screencap.py</strong>
 
-A Python 2.7 script that uses FFMPEG to extract png screencaps from anime episodes. Set the <a href="https://github.com/maleficarium/Scripts/blob/master/screencap.py#L14"> path </a> and <a href="https://github.com/maleficarium/Scripts/blob/master/screencap.py#L16"> outputpath </a> variables to where the episodes are located and where you want the screencaps to be saved respectively. Search for the episode with a word from the filename + episode number (e.g. Tsukai 5 for Seiken Tsukai no World Break - 05 [1080p].mkv).
+A Python 2.7 script that uses FFMPEG to extract png screencaps from anime episodes. Set the <a href="https://github.com/maleficarium/Scripts/blob/master/screencap.py#L14">path</a> and <a href="https://github.com/maleficarium/Scripts/blob/master/screencap.py#L16">outputpath</a> variables to where the episodes are located and where you want the screencaps to be saved respectively. Search for the episode with a word from the filename + episode number (e.g. Tsukai 5 for Seiken Tsukai no World Break - 05 [1080p].mkv).
