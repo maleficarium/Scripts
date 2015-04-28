@@ -6,7 +6,7 @@ import time
 
 videoInfo = {'path': "", 'audio_name': "", 'video_name': "", 'final_name': ""}
 ##Sample videoInfo
-#videoInfo = {'final_name': u'C:\\Users\\maleficarium/Desktop\\- -bMftWj-e2T4.mp4', 'path': 'C:\\Users\\maleficarium/Desktop/', 'video_name': 'C:\\Users\\maleficarium/Desktop/937bcebcc1c100815b2c75536ee6724afd07ec61f07c76d6c670ae23.mp4', 'audio_name': 'C:\\Users\\maleficarium/Desktop/4cf3614c8e8619703ed6c6ddfaddd19d31ba4ad4cd600d301123ce28.m4a', 'vid_name': ''}
+#videoInfo = {'final_name': u'C:\\Users\\maleficarium/Desktop\\- -bMftWj-e2T4.mp4', 'path': 'C:\\Users\\maleficarium/Desktop/', 'video_name': 'C:\\Users\\maleficarium/Desktop/937bcebcc1c100815b2c75536ee6724afd07ec61f07c76d6c670ae23.mp4', 'audio_name': 'C:\\Users\\maleficarium/Desktop/4cf3614c8e8619703ed6c6ddfaddd19d31ba4ad4cd600d301123ce28.m4a'}
 
 
 def videoMerge(path, audio, video, final):
