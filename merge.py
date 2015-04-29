@@ -9,13 +9,6 @@ videoInfo = {'path': "", 'audio_name': "", 'video_name': "", 'final_name': ""}
 #videoInfo = {'final_name': u'C:\\Users\\maleficarium/Desktop\\- -bMftWj-e2T4.mp4', 'path': 'C:\\Users\\maleficarium/Desktop/', 'video_name': 'C:\\Users\\maleficarium/Desktop/937bcebcc1c100815b2c75536ee6724afd07ec61f07c76d6c670ae23.mp4', 'audio_name': 'C:\\Users\\maleficarium/Desktop/4cf3614c8e8619703ed6c6ddfaddd19d31ba4ad4cd600d301123ce28.m4a'}
 
 
-def videoMerge(path, audio, video, final):
-	videoInfo = {'path': path, 'audio_name': audio, 'video_name': video, 'final_name': final}
-	videoInfo['audio_name'] = hashRename(videoInfo['path'], audio, ".m4a")
-	videoInfo['video_name'] = hashRename(videoInfo['path'], video, ".mp4")
-	mergeVid(videoInfo)
-
-
 def randomword(length):
    return ''.join(random.choice(string.lowercase) for i in range(length))
 
@@ -37,8 +30,13 @@ def mergeVid(info):
 	os.remove(info['audio_name'])
 	os.remove(info['video_name'])
 
+def videoMerge(path, audio, video, final):
+	videoInfo = {'path': path, 'audio_name': audio, 'video_name': video, 'final_name': final}
+	videoInfo['audio_name'] = hashRename(videoInfo['path'], audio, ".m4a")
+	videoInfo['video_name'] = hashRename(videoInfo['path'], video, ".mp4")
+	mergeVid(videoInfo)
 
-if __name__ == '__main__':
+def coreMerge():
 	#Generate the path to the Desktop
 	userhome = os.path.expanduser('~')
 	videoInfo['path'] = userhome + '/Desktop/'
@@ -59,3 +57,7 @@ if __name__ == '__main__':
 
 				vids = vids + 1
 	print "FFmpeg merge end. Converted videos: " + str(vids)
+
+
+if __name__ == '__main__':
+	coreMerge()
