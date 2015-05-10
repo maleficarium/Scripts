@@ -11,7 +11,7 @@ def randomword(length):
 os.system('cls') #CLEARS SCREEN, REMOVE WHEN TESTING
 
 #Set the path where the episodes are stored
-path = 'M:\\!!!Torrents'
+path = 'M:\\___Torrents'
 
 #Set the output path
 outputpath = 'e:\\autoscreenshots\\'
