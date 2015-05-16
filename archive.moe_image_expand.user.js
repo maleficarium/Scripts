@@ -16,9 +16,10 @@ function addElement () {
   newContent.appendChild(t);
   newContent.onclick = ExpandImages;
   newDiv.appendChild(newContent);
+  
 
-  var currentDiv = document.getElementById("MathJax_Message"); 
-  document.body.insertBefore(newDiv, currentDiv); 
+  // var currentDiv = document.getElementById("MathJax_Message"); 
+  document.body.insertBefore(newDiv, document.body.firstChild); 
 }
 
 
