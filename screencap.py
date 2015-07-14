@@ -48,6 +48,7 @@ duration = raw_input('Input duration S: ')
 
 #Structure the FFMPEG command
 ffmpegcommand = "ffmpeg -ss " + position + " -i \"" + animelink[0] + "\" -t "  + duration + " -r 24 " + outputpath + animecode[0] + "_" + randomword(5) + "_%04d.png"
+#ffmpegcommand = "ffmpeg -ss " + position + " -i \"" + animelink[0] + "\" -t "  + duration + " -r 24 -vf scale=854:480 " + outputpath + animecode[0] + "_" + randomword(5) + "_%04d.png"
 print ffmpegcommand
 
 os.system(ffmpegcommand)
