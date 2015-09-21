@@ -1,0 +1,30 @@
+$delitems = {$tem_pvar}.Invoke()
+dir M:\__Torrents\ '[*Raw*]*(*' | Rename-Item -NewName { $_.Name -replace "\(","[" }
+dir M:\__Torrents\ '[*Raw*]*)*' | Rename-Item -NewName { $_.Name -replace "\)","]" } -PassThru | % {$delitems.Add($_)}
+$delitems
+# SIG # Begin signature block
+# MIIEUAYJKoZIhvcNAQcCoIIEQTCCBD0CAQExCzAJBgUrDgMCGgUAMGkGCisGAQQB
+# gjcCAQSgWzBZMDQGCisGAQQBgjcCAR4wJgIDAQAABBAfzDtgWUsITrck0sYpfvNR
+# AgEAAgEAAgEAAgEAAgEAMCEwCQYFKw4DAhoFAAQUlgAYEADWJBIOH6gcecQMNlZS
+# PCmgggJTMIICTzCCAbygAwIBAgIQx27sa5duepNK0UANcrAMJjAJBgUrDgMCHQUA
+# MDMxMTAvBgNVBAMTKFBvd2VyU2hlbGwgbWFsZWZpY2FyaXVtIENlcnRpZmljYXRl
+# IFJvb3QwHhcNMTUwOTE5MTEyMzA5WhcNMzkxMjMxMjM1OTU5WjAiMSAwHgYDVQQD
+# ExdQb3dlclNoZWxsIG1hbGVmaWNhcml1bTCBnzANBgkqhkiG9w0BAQEFAAOBjQAw
+# gYkCgYEAzO/RVptxfwvduWbjCsaUqXFrl7x1C4zgc1gX57fsJSgUqH2LUZyCagiK
+# 8cGyOTI0FArysl5YquS9mARad3aT/8VUWIcjt0ms9yQAE2DnSDBKlDCA2yJlt5pL
+# 7CKcJO8ULxIW5Cr6oLskqGelcJE4tn237dBkrGvwEdEjplrBLeECAwEAAaN9MHsw
+# EwYDVR0lBAwwCgYIKwYBBQUHAwMwZAYDVR0BBF0wW4AQmu0qu0qkmUpWgCJrx1sh
+# X6E1MDMxMTAvBgNVBAMTKFBvd2VyU2hlbGwgbWFsZWZpY2FyaXVtIENlcnRpZmlj
+# YXRlIFJvb3SCEH5/vY8ewqGQSKjm1UKawukwCQYFKw4DAh0FAAOBgQAvkjsB+PnM
+# yaLhvVH36mwyrniuCMhvHqUOpKoTWuzHmlWPF6zxQk99lFLiTfrOnKpmGvxfmXj8
+# rSqatIwU+OXtrxyGzBvo3BoPZC+5IEAnKGlyllsoD54m80ZL3fPJ/QcukIhKoN08
+# fxSbwOUSbnoMGVKuCmmTYkghl73DLXw1mDGCAWcwggFjAgEBMEcwMzExMC8GA1UE
+# AxMoUG93ZXJTaGVsbCBtYWxlZmljYXJpdW0gQ2VydGlmaWNhdGUgUm9vdAIQx27s
+# a5duepNK0UANcrAMJjAJBgUrDgMCGgUAoHgwGAYKKwYBBAGCNwIBDDEKMAigAoAA
+# oQKAADAZBgkqhkiG9w0BCQMxDAYKKwYBBAGCNwIBBDAcBgorBgEEAYI3AgELMQ4w
+# DAYKKwYBBAGCNwIBFTAjBgkqhkiG9w0BCQQxFgQUGx2aB0KkjStCneKZAV94DamB
+# 27MwDQYJKoZIhvcNAQEBBQAEgYBzmO3V5GOgYVxAaBslea+1GN3/6x9nHFsqGdLl
+# b+kp2BFfF9mWaDMWz4uEw+9Dcf6+dgPkBHs0K3vvzQ6pWAxZy950hLC3vIhH8FiZ
+# kxwzAPcNUmUCq1cKGSRvsvIgDjOk2QmsOz5cTPn0u/yfdhoqzVJFyFyZLEwPj3Mi
+# DfgwWA==
+# SIG # End signature block
