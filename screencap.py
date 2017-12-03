@@ -14,7 +14,7 @@ os.system('cls') #CLEARS SCREEN, REMOVE WHEN TESTING
 path = 'M:\\__Torrents'
 
 #Set the output path
-outputpath = 'e:\\autoscreenshots\\'
+outputpath = 'm:\\autoscreenshots\\'
 
 animeid = None
 animelink = ''
